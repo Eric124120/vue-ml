@@ -1,20 +1,20 @@
 <template>
-    <div>
+    <div class="page-toast-group">
         <h1>{{text}}</h1>
-        <button @click="successToast">successToast</button>
-        <button @click="failToast">failToast</button>
-        <button @click="networkToast">networkToast</button>
+        <ml-button size="large" type="primary" v-on:handleClick="successToast">successToast</ml-button>
+        <ml-button size="large" type="danger" v-on:handleClick="failToast">failToast</ml-button>
+        <ml-button size="large" type="default" v-on:handleClick="networkToast">networkToast</ml-button>
     </div>
 </template>
 <style>
-    button {
-        margin: 10px 10%;
+    .page-toast-group {
         width: 80%;
-        line-height: 44px;
-        border: 1px solid #e8e8e8;
-        border-radius: 5px;
-        background: #fff;
+        padding: 10%;
     }
+    .page-toast-group button {
+        margin-top: 15px;
+    }
+
 </style>
 <script>
     import {Toast} from '../index.js'

@@ -6,6 +6,7 @@ import VueRouter from "vue-router"
 import VueResource from 'vue-resource'
 import demoList from './vue/demoList.vue'
 import toast from './vue/toast.vue'
+import button from './vue/button.vue'
 //开启debug模式
 Vue.config.debug = true;
 
@@ -24,6 +25,10 @@ const router = new VueRouter({
 		path: '/toast',
 		name: 'toast',
 		component: toast
+	}, {
+		path: '/button',
+		name: 'button',
+		component: button
 	}]
 });
 

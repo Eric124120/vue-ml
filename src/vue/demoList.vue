@@ -1,6 +1,5 @@
 <template>
     <div>
-        <first-component/>
         <router-link v-bind:to="item.toUrl" class="fm-list-item" v-for="item in items">
             <div class="fm-list-content" v-text="item.titleTxt"></div>
             <div class="fm-list-arrow">
@@ -21,6 +20,10 @@
                   {
                     toUrl: '/toast',
                     titleTxt: 'toast'
+                  },
+                  {
+                    toUrl: '/button',
+                    titleTxt: 'button'
                   }
                ]
             }
