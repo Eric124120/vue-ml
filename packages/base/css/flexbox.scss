@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+
+@import '../helper/css3';
+@import '../helper/mixin';
+
+
+.ml-flexbox {
+    @include display-flex();
+
+    @include align-items();
+
+    &-item {
+        @include flex(1);
+
+        // 行内元素兼容增加block
+        display: block;
+        
+        margin-left: 8px;
+        min-width: 20px;
+        overflow: hidden;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        /* 溢出隐藏 */
+        &.ml-item-ellipsis {
+            width: auto;
+            @include ellipsis();
+        }
+    }
+}

@@ -1,17 +1,15 @@
 <template>
     <div>
-        <router-link v-bind:to="item.toUrl" class="fm-list-item" v-for="item in items">
-            <div class="fm-list-content" v-text="item.titleTxt"></div>
-            <div class="fm-list-arrow">
-                <span class="fm-icon-arrow-right"></span>
+        <router-link v-bind:to="item.toUrl" class="ml-list-item" v-for="item in items">
+            <div class="ml-list-content" v-text="item.titleTxt"></div>
+            <div class="ml-list-arrow">
+                <span class="ml-icon-arrow-right"></span>
             </div>
         </router-link>
     </div>
 </template>
 
 <script>
-    import '../css/base.scss'
-    import '../css/form.scss'
 
     export default{
         data(){
@@ -24,6 +22,18 @@
                   {
                     toUrl: '/button',
                     titleTxt: 'button'
+                  },
+                  {
+                    toUrl: '/checkbox',
+                    titleTxt: 'checkbox'
+                  },
+                  {
+                    toUrl: '/switch',
+                    titleTxt: 'switch'
+                  },
+                  {
+                    toUrl: '/messagebox',
+                    titleTxt: 'messagebox'
                   }
                ]
             }

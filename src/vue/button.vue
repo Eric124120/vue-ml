@@ -5,6 +5,7 @@
             <ml-button size="large">default</ml-button>
             <ml-button size="large" type="primary">primary</ml-button>
             <ml-button size="large" type="danger">danger</ml-button>
+            <ml-button size="large" :disabled="disabled">default</ml-button>
         </div>
         <div class="demo-list page-button-group">
             <h3>button small</h3>
@@ -35,7 +36,8 @@
     export default{
         data(){
             return{
-                msg:'hello vue'
+                msg:'hello vue',
+                disabled: true
             }
         },
         components:{

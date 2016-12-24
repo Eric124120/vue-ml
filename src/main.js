@@ -7,6 +7,12 @@ import VueResource from 'vue-resource'
 import demoList from './vue/demoList.vue'
 import toast from './vue/toast.vue'
 import button from './vue/button.vue'
+import checkbox from './vue/checkbox.vue'
+import Switch from './vue/switch.vue'
+import Messagebox from './vue/messagebox.vue'
+
+
+
 //开启debug模式
 Vue.config.debug = true;
 
@@ -29,6 +35,18 @@ const router = new VueRouter({
 		path: '/button',
 		name: 'button',
 		component: button
+	}, {
+		path: '/checkbox',
+		name: 'checkbox',
+		component: checkbox
+	}, {
+		path: '/switch',
+		name: 'switch',
+		component: Switch
+	}, {
+		path: '/messagebox',
+		name: 'messagebox',
+		component: Messagebox
 	}]
 });
 

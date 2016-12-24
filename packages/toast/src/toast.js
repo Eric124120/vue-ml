@@ -4,8 +4,11 @@
 import Vue from 'vue';
 
 const ToastConstructor = Vue.extend(require('./toast.vue'));
+const OverlayConstructor = Vue.extend(require('../../overlay/src/overlay.vue'));
+
 
 let vmPool = [];
+let overlay = null;
 let getVm = () => {
 	if(vmPool.length > 0) {
 		let vm = vmPool[0];
@@ -28,17 +31,14 @@ let returnAnInstance = vm => {
 // 关闭toast
 ToastConstructor.prototype.close = function(){
 	this.visible = false;
-	this.modal = false;
-	this.$el.addEventListener('transitionend', removeDom);
+	// 关闭遮罩
+	overlay && (overlay.display = false);
 	this.closed = true;
 	returnAnInstance(this);
 }
 
 let Toast = function(options) {
 	let vm = getVm();
-
-	// 缓存是否弹遮罩
-	vm.modal = vm._modal = vm._modal ? vm._modal : vm.modal;
 
 	// 将options属性拷贝给vm
 	if(typeof options === 'string') {
@@ -51,10 +51,17 @@ let Toast = function(options) {
 
 	document.body.appendChild(vm.$el);
 
+	// 弹遮罩
+	if(vm.modal) {
+		overlay = new OverlayConstructor({
+			el: document.createElement('div')
+		});
+		document.body.appendChild(overlay.$el);
+	}
+
 	// 当toast挂载到document上面是触发
 	Vue.nextTick(function() {
 		vm.visible = true;
-		vm.$el.removeEventListener('transitionend', removeDom);
 		vm.timer = setTimeout(function() {
 
 			if (vm.closed) return;
@@ -64,14 +71,6 @@ let Toast = function(options) {
 	});
 	return vm;
 
-}
-
-
-// 移除toast节点
-let removeDom = event => {
-	if (event.target.parentNode) {
-		event.target.parentNode.removeChild(event.target);
-	}
 }
 
 export default Toast;

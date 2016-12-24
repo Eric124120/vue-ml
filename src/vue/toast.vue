@@ -17,7 +17,7 @@
 
 </style>
 <script>
-    import {Toast} from '../index.js'
+    import {Toast} from '../../packages'
     
     export default{
         data(){
@@ -27,19 +27,19 @@
         },
         methods:{
             successToast: function() {
-                this.$toast({
+                this.$ml.Toast({
                     message: '操作成功',
                     iconClass: 'icon-toast-success'
                 });
             },
             failToast: function() {
-                this.$toast({
+                this.$ml.Toast({
                     message: '操作失败',
                     iconClass: 'icon-toast-fail'
                 });
             },
             networkToast: function() {
-                this.$toast({
+                this.$ml.Toast({
                     message: '网络异常',
                     iconClass: 'icon-toast-network'
                 });
