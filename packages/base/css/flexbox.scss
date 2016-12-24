@@ -1,33 +1,31 @@
-@charset "UTF-8";
-
-
-@import '../helper/css3';
-@import '../helper/mixin';
-
 
 .ml-flexbox {
-    @include display-flex();
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	align-items: center;
+}
 
-    @include align-items();
+.ml-flexbox-item {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	flex: 1;
+	display: block;
+	margin-left: 8px;
+	min-width: 20px;
+	overflow: hidden;
+}
 
-    &-item {
-        @include flex(1);
+.ml-flexbox-item:first-child {
+	margin-left: 0;
+}
 
-        // 行内元素兼容增加block
-        display: block;
-        
-        margin-left: 8px;
-        min-width: 20px;
-        overflow: hidden;
-
-        &:first-child {
-            margin-left: 0;
-        }
-
-        /* 溢出隐藏 */
-        &.ml-item-ellipsis {
-            width: auto;
-            @include ellipsis();
-        }
-    }
+.ml-flexbox-item.ml-item-ellipsis {
+	width: auto;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }

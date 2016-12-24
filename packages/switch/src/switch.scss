@@ -19,7 +19,7 @@
 		border: 2px solid;
 		border-radius: 28px;
 		background-color: currentColor;
-		color: #b5b5b5;
+		color: #cacaca;
 
 		&:before {
 			content: "";
@@ -34,14 +34,14 @@
 	}
 
 	:checked+.ml-switch-label {
-		color: #f7b033;
+		color: #ff552e;
 		&:before {
 			margin-left: 24px;
 		}
 	}
 
 	:disabled+.ml-switch-label {
-		color: #ccc;
+		color: #cacaca;
 		&:before {
 			background-color: #efefef;
 		}

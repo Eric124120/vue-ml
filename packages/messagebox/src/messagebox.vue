@@ -1,6 +1,6 @@
 <template>
     <transition name="msgbox-bounce">
-        <div class="ml-dialog" v-show="value">
+        <div class="ml-dialog" v-if="value">
             <div class="ml-dialog-header">
                 <i class="ml-dialog-icon" v-if="icon">
                     <img :src="icon" width="36" height="36">

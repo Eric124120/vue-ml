@@ -1,19 +1,23 @@
 <template>
-    <div class="page-toast-group">
-        <h1>{{text}}</h1>
-        <ml-button size="large" type="primary" v-on:handleClick="successToast">successToast</ml-button>
-        <ml-button size="large" type="danger" v-on:handleClick="failToast">failToast</ml-button>
-        <ml-button size="large" type="default" v-on:handleClick="networkToast">networkToast</ml-button>
+    <div>
+        <div class="ml-flexbox">
+            <div class="ml-flexbox-item">
+                <ml-button size="large" v-on:handleClick="networkToast">networkToast</ml-button>
+            </div>
+        </div>
+        <div class="ml-flexbox">
+            <div class="ml-flexbox-item">
+                <ml-button size="large" type="white-orange" v-on:handleClick="successToast">successToast</ml-button>
+            </div>
+        </div>
+        <div class="ml-flexbox">
+            <div class="ml-flexbox-item">
+                <ml-button size="large" type="orange-white" v-on:handleClick="failToast">failToast</ml-button>
+            </div>
+        </div>
     </div>
 </template>
 <style>
-    .page-toast-group {
-        width: 80%;
-        padding: 10%;
-    }
-    .page-toast-group button {
-        margin-top: 15px;
-    }
 
 </style>
 <script>

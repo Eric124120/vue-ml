@@ -1,23 +1,23 @@
 <template>
     <div>
-        <div class="demo-list page-button-group">
-            <h3>show messageBox</h3>
-            <ml-button size="large" @handleClick="alert">alert</ml-button>
-            <ml-button size="large" @handleClick="confirm">confirm</ml-button>
-            <ml-button size="large"  @handleClick="iconConfirm">icon confirm</ml-button>
+        <div class="ml-flexbox">
+            <div class="ml-flexbox-item">
+                <ml-button size="large" @handleClick="alert">alert</ml-button>
+            </div>
+        </div>
+        <div class="ml-flexbox">
+            <div class="ml-flexbox-item">
+                <ml-button size="large" @handleClick="confirm">confirm</ml-button>
+            </div>
+        </div>
+        <div class="ml-flexbox">
+            <div class="ml-flexbox-item">
+                <ml-button size="large" @handleClick="iconConfirm">iconConfirm</ml-button>
+            </div>
         </div>
     </div>
 </template>
-<style>
-    .page-button-group {
-        width: 80%;
-        padding: 10%;
-    }
 
-    .page-button-group button {
-        margin-top: 15px;
-    }
-</style>
 <script>
     
     export default{

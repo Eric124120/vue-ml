@@ -1,8 +1,8 @@
 <template>
     <transition name="ml-toast-pop">
-        <div class="ml-toast" v-if="visible" :style="{ 'padding': iconClass === '' ? '10px' : '20px' }">
+        <div class="ml-toast" v-if="visible" :style="{ 'padding': iconClass === '' ? '10px' : '24px 24px 20px' }">
             <i class="ml-toast-icon" :class="iconClass" v-if="iconClass !== ''"></i>
-            <span class="ml-toast-text" :style="{ 'padding-top': iconClass === '' ? '0' : '10px' }">{{ message }}</span>
+            <span class="ml-toast-text" :style="{ 'padding-top': iconClass === '' ? '0' : '8px' }">{{ message }}</span>
         </div>
     </transition>
 </template>

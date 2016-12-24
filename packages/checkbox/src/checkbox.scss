@@ -20,26 +20,26 @@
 			position: absolute;
 			top: 50%;
 			right: 18px;
-			width: 16px;
-			height: 16px;
+			width: 20px;
+			height: 20px;
 			margin-top: -8px;
-			border: 1px solid #d9d9d9;
+			border: 1px solid #cacaca;
 			border-radius: 50%;
 			-webkit-background-clip: padding-box;
 		}
 
 		// 选中状态
 		&:checked+.ml-icon-checkbox {
-			border-color: #f7b033;
-			background-color: #f7b033;
+			border-color: #ff552e;
+			background-color: #ff552e;
 
 			&:after {
 				position: absolute;
 				content: "";
-				width: 8px;
-				height: 4px;
-				top: 5px;
-				left: 3px;
+				width: 11px;
+				height: 5px;
+				top: 6px;
+				left: 4px;
 				-webkit-transform: rotate(-45deg);
 				transform: rotate(-45deg);
 				border-left: 1px solid #fff;

@@ -1,13 +1,15 @@
 # vue-ml
 
 > 基于vue2.0的组件开发
-> 目前实现的组件有：
+
+# 目前实现的组件有：
+
 > button
-> checkbox
-> overlay
-> toast
-> switch
-> messagebox
+checkbox
+overlay
+toast
+switch
+messagebox
 
 ## Build Setup
 

@@ -1,35 +1,73 @@
 <template>
     <div>
-        <div class="demo-list page-button-group">
-            <h3>button large</h3>
-            <ml-button size="large">default</ml-button>
-            <ml-button size="large" type="primary">primary</ml-button>
-            <ml-button size="large" type="danger">danger</ml-button>
-            <ml-button size="large" :disabled="disabled">default</ml-button>
+        <div class="ml-flexbox">
+            <div class="ml-flexbox-item">
+                <ml-button size="large">default</ml-button>
+            </div>
         </div>
-        <div class="demo-list page-button-group">
+        <div class="ml-flexbox">
+            <div class="ml-flexbox-item">
+                <ml-button size="large" type="white-orange">white-orange</ml-button>
+            </div>
+        </div>
+        <div class="ml-flexbox">
+            <div class="ml-flexbox-item">
+                <ml-button size="large" type="orange-white">orange-white</ml-button>
+            </div>
+        </div>
+        <div class="ml-flexbox">
+            <div class="ml-flexbox-item">
+                <ml-button size="large" type="white-blue">white-blue</ml-button>
+            </div>
+        </div>
+        <div class="ml-flexbox">
+            <div class="ml-flexbox-item">
+                <ml-button size="large" type="blue-white">blue-white</ml-button>
+            </div>
+        </div>
+        <div class="ml-flexbox">
+            <div class="ml-flexbox-item">
+                <ml-button size="large" :disabled="disabled">disabled</ml-button>
+            </div>
+        </div>
+
+
+
+        <div class="demo-list">
             <h3>button small</h3>
             <ml-button size="small">default</ml-button>
-            <ml-button size="small" type="primary">primary</ml-button>
-            <ml-button size="small" type="danger">danger</ml-button>
+            <ml-button size="small" type="white-orange">white-orange</ml-button>
+            <ml-button size="small" type="orange-white">orange-white</ml-button>
+            <ml-button size="small" type="white-blue">white-blue</ml-button>
+            <ml-button size="small" type="blue-white">blue-white</ml-button>
+            <ml-button size="small" :disabled="disabled">disabled</ml-button>
         </div>
-        <div class="demo-list page-button-group">
+        <div class="demo-list">
             <h3>button normal</h3>
             <ml-button size="normal">default</ml-button>
-            <ml-button size="normal" type="primary">primary</ml-button>
-            <ml-button size="normal" type="danger">danger</ml-button>
+            <ml-button size="normal" type="white-orange">white-orange</ml-button>
+            <ml-button size="normal" type="orange-white">orange-white</ml-button>
+            <ml-button size="normal" type="white-blue">white-blue</ml-button>
+            <ml-button size="normal" type="blue-white">blue-white</ml-button>
+            <ml-button size="normal" :disabled="disabled">disabled</ml-button>
         </div>
+
+
+
     </div>
 </template>
-<style>
-    .page-button-group {
-        width: 80%;
-        padding: 10%;
+<style lang="sass">
+    .demo-list {
+        padding: 14px;
+        h3 {
+            padding: 15px;
+        }
+
+        button {
+            margin: 5px;
+        }
     }
 
-    .page-button-group button {
-        margin-top: 15px;
-    }
 </style>
 <script>
     
